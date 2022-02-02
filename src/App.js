@@ -1,5 +1,5 @@
 import Carousel from './components/Carousel/Carousel';
-import Carousel from './components/RewardCalculator/RewardCalculator';
+import RewardCalculator from './components/RewardCalculator/RewardCalculator';
 
 
 const App = () => {
