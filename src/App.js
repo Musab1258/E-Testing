@@ -1,7 +1,14 @@
+import Carousel from './components/Carousel/Carousel';
+import Carousel from './components/RewardCalculator/RewardCalculator';
+
+
 const App = () => {
   return (
-    <h1>Welcome</h1>
-  )
+    <div>
+      <Carousel />
+      <RewardCalculator />
+    </div>
+  );
 }
 
 export default App;
