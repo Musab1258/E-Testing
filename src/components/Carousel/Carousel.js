@@ -31,7 +31,7 @@ const Carousel = () => {
       </footer>
       
     </div>
-  )
+  );
 }
 
 export default Carousel;
