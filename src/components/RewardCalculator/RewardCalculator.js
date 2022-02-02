@@ -1,10 +1,9 @@
 const RewardCalculator = () => {
   return (
     <form>
-      <input type='num' />
-      <button placeholder='Submit' />
+      <input type='number' />
+      <button>Submit</button>
     </form>
-    <p></p>
   )
 }
 
