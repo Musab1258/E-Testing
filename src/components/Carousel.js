@@ -29,43 +29,22 @@ export default function Carousel() {
     ],
   }
 
-  const hotelCards = [
+  const facts = [
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1559508551-44bff1de756b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80',
-      title: 'Studio Room',
-      description: 'Lorem ipsum dolor sit amet, consectur dolori',
-      pricingText: 'USD 50/Day',
-      features: ['Free Wifi', 'Free breakfast'],
+      imageSrc: "../images/Waste.jpeg.jpg"
+      description: "Do you know that: In Lagos alone, about 9,000 tonnes of waste are generated daily with about 86 per cent of it plastic."
     },
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1616940844649-535215ae4eb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-      title: 'Deluxe Room',
-      description: 'Lorem ipsum dolor sit amet, consectur dolori',
-      pricingText: 'USD 80/Day',
-      features: ['Free Wifi', 'Free breakfast'],
+      imageSrc: "../images/Drainage.jpeg.jpg"
+      description: "Due to poor waste management awareness residents dump waste indiscriminately into drainage channels and on the streets."
     },
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1599619351208-3e6c839d6828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
-      title: 'King Deluxe Room',
-      description: 'Lorem ipsum dolor sit amet, consectur dolori',
-      pricingText: 'USD 150/Day',
-      features: ['Free Wifi', 'Free breakfast', 'Discounted Meals'],
+      imageSrc: "../images/Flooding.jpeg.jpg"
+      description: "These dumped waste leads to environmental degradation and also, flooding."
     },
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1461092746677-7b4afb1178f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
-      title: 'Royal Suite',
-      description: 'Lorem ipsum dolor sit amet, consectur dolori',
-      pricingText: 'USD 299/Day',
-      features: [
-        'Free Wifi',
-        'Free breakfast',
-        'Discounted Meals',
-        "MacBook for work use (hotel's property)",
-      ],
+      imageSrc: "../images/Cash.jpeg.jpg"
+      description: "At Recycle, we recycle plastic waste, but, we need you to help us gather them while we pay you."
     },
   ]
 
@@ -80,26 +59,13 @@ export default function Carousel() {
         </button>
       </div>
       <Slider ref={setSliderRef} {...sliderSettings}>
-        {hotelCards.map((card, index) => (
-          <div key={index} className='card'>
-            <img src={card.imageSrc} alt={card.title} className='card-image' />
-            <div className='text-info'>
-              <div className='card-header'>
-                <h2>{card.title}</h2>
-                <span>{card.pricingText}</span>
-              </div>
-              <p>{card.description}</p>
-              <ul>
-                {card.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </div>
-            <button>Buy Now</button>
+        {facts.map((fact, index) => (
+          <div key={index} className='fact'>
+            <img src={fact.imageSrc} className='fact-image' />
+            <p>{fact.description}</p>
           </div>
         ))}
       </Slider>
     </div>
   )
 }
-
