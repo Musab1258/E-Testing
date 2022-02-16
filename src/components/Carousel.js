@@ -31,19 +31,19 @@ export default function Carousel() {
 
   const facts = [
     {
-      imageSrc: "../images/Waste.jpeg.jpg",
+      imageSrc: "https://github.com/Musab1258/Test-prep/blob/main/src/images/Waste.jpeg.jpg",
       description: "Do you know that:  In Lagos alone, about 9,000 tonnes of waste are generated daily with about 86 per cent of it plastic.",
     },
     {
-      imageSrc: "../images/Drainage.jpeg.jpg",
+      imageSrc: "https://github.com/Musab1258/Test-prep/blob/main/src/images/Drainage.jpeg.jpg",
       description: "Due to poor waste management awareness residents dump waste indiscriminately into drainage channels and on the streets.",
     },
     {
-      imageSrc: "../images/Flooding.jpeg.jpg",
+      imageSrc: "https://github.com/Musab1258/Test-prep/blob/main/src/images/Flooding.jpeg.jpg",
       description: "These dumped waste leads to environmental degradation and also, flooding.",
     },
     {
-      imageSrc: "../images/Cash.jpeg.jpg",
+      imageSrc: "https://github.com/Musab1258/Test-prep/blob/main/src/images/Cash.jpeg.jpg",
       description: "At Recycle, we recycle plastic waste, but, we need you to help us gather them while we pay you.",
     },
   ]
