@@ -3,15 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 import Login from './routes/login';
+import UserHome from './components/UserHome';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App />} /> 
-        <Route path='login' element={<Login />} />  
+        <Route path='/' element={<App />} />
+        <Route path='Home' element={<Home />} /> 
+        <Route path='login' element={<Login />} />
+        <Route path='UserHome' element={<UserHome />} />  
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
