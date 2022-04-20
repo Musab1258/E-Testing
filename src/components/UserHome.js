@@ -1,7 +1,11 @@
 import Nav from "./Nav";
 import Placeholder from "../images/placeholder-image.png"
+import { useLocation } from "react-router-dom";
 
-function UserHome({ name }) {
+function UserHome() {
+    const location = useLocation();
+    const name = location.state?.name;
+
     return (
       <div className="grid grid-cols-4 h-screen">
         <Nav className="col-span-1" />
