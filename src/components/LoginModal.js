@@ -8,9 +8,9 @@ function LoginModal({ setIsOpen }) {
 
   
   return (
-    <div className="fixed top-0 h-screen w-screen">
-      <div className="flex m-auto justify-items-center h-screen w-2/4">
-        <form className="m-auto w-screen h-4/5 border-white bg-white text-black rounded-lg shadow-lg p-2">
+    <div className="fixed top-0 left-0 h-screen w-screen shadow-lg">
+      <div className="flex h-screen w-screen border-blue-900 border-2 shadow-lg justify-items-center items-center">
+        <form className="w-3/4 sm:w-2/4 h-4/5 m-auto border-blue-900 border-2 bg-white text-black rounded-lg shadow-2xl p-2">
           <h1 className="h-10 m-auto text-lg rounded-lg bg-black text-white text-center">Login</h1>
           <p className="text-center my-4 text-lg">Please fill in your details to login</p>
           <label className="mb-5 mx-5 flex flex-col">UserName
