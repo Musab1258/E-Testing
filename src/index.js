@@ -10,6 +10,11 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <div className="mobile__content">
+      <h1> 
+        Only available on desktop
+      </h1>
+    </div>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
