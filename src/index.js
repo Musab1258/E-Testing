@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Radium, { StyleRoot } from 'radium';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -8,9 +9,23 @@ import Login from './routes/login';
 import UserHome from './components/UserHome';
 import reportWebVitals from './reportWebVitals';
 
+const style1 = {
+  '@media (max-width: 700px)': {
+        display: 'none',
+    },
+}
+
+const style2 = {
+  '.mobile__content': {
+    display: 'block',
+    margin: '5pc 2pc',
+    color: 'blue',
+  },
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <div className="mobile__content">
+    <div style={style2} >
       <h1> 
         Only available on desktop
       </h1>
