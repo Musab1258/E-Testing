@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Login from './routes/login';
-import UserHome from './components/UserHome';
+import Signin from "./components/Signin";
+import RetrievePassword from './components/RetrievePassword';
+import Instruction from './components/Instruction';
+import Question from './components/Question';
+import SubmissionStatus from './components/SubmissionStatus';
+
 import reportWebVitals from './reportWebVitals';
 
 
@@ -14,9 +17,11 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
-        <Route path='Home' element={<Home />} /> 
-        <Route path='login' element={<Login />} />
-        <Route path='UserHome' element={<UserHome />} />  
+        <Route path='Signin' element={<Signin />} />
+        <Route path='RetrievePassword' element={<RetrievePassword />} /> 
+        <Route path='Instruction' element={<Instruction />} />
+        <Route path='Question' element={<Question />} />
+        <Route path='SubmissionStatus' element={<SubmissionStatus />} />  
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

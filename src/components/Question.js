@@ -1,6 +1,10 @@
+  
+
+
 const Question = () => {
   return (
     <div>
+        <QuestionNavBar />
         <div>
             <p>Q1:</p>
             <p>Question</p>

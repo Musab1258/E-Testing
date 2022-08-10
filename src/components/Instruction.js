@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import Question from "./Question";
+
 const Instructions = () => {
   return (
     <div>
@@ -7,6 +10,7 @@ const Instructions = () => {
             <li>Don't be afraid</li>
             <li>wagmi</li>
         </ul>
+        <Link to="Question"><button>Start Now</button></Link>
     </div>  
   )
 }

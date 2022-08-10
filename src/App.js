@@ -1,14 +1,15 @@
-import Home from "./components/Instruction";
+import { Link } from "react-router-dom";
+import Instruction from "./components/Instruction";
 
 
 function App() {
   return (
     <div>
-      <img />
-      <img />
+      <img alt="" />
+      <img alt="" />
       <h1>Welcome to Perxel's e-assesment platform</h1>
       <p>We wish you a blissful experience and great luck in your assesment</p>
-      <button>Get Started</button>
+      <Link to="Instruction"><button>Get Started</button></Link>
     </div>
   );
 }
