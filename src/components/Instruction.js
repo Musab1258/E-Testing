@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Question from "./Question";
 
-const Instructions = () => {
+const Instruction = () => {
   return (
     <div>
         <h1>Instructions</h1>
@@ -15,4 +15,4 @@ const Instructions = () => {
   )
 }
 
-export default Instructions;
+export default Instruction;
