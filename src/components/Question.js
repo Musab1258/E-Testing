@@ -1,4 +1,4 @@
-import QuestionNavBar from "QuestionNavBar";  
+import QuestionNavBar from "./QuestionNavBar";  
 
 
 const Question = () => {
