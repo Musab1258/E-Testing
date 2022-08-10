@@ -1,7 +1,7 @@
 import QuestionNavBar from "./QuestionNavBar";  
 
 
-const Question = () => {
+function Question() {
   return (
     <div>
         <QuestionNavBar />
@@ -22,7 +22,7 @@ const Question = () => {
             <button>Next</button>
         </div>
     </div>  
-  )
+  );
 }
 
 export default Question;
