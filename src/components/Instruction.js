@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Question from "./Question";
+import Question from "./Question"
 
-const Instruction = () => {
+function Instruction() {
   return (
     <div>
         <h1>Instructions</h1>
@@ -12,7 +12,7 @@ const Instruction = () => {
         </ul>
         <Link to="Question"><button>Start Now</button></Link>
     </div>  
-  )
+  );
 }
 
 export default Instruction;

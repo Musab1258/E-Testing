@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+
+
 
 const QuestionNavBar = () => {
     return (
         <div>
-            <img />
+            <img alt=""/>
             <p></p>
             <p>Time Left</p>
             <p>00hr : 10m : 30s</p>
