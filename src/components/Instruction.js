@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Question from "./Question"
+//import Question from "./Question";
 
 function Instruction() {
   return (
