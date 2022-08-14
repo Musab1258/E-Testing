@@ -1,12 +1,13 @@
-
-
+import rectangle from "../images/Rectangle.svg";
+import perxels from "../images/perxels.svg";
+import checked from "../images/checked.svg"
 
 const SubmissionStatus = () => {
     return (
         <div>
-            <img src="./images/Rectangle.svg" alt="Top rectangle" />
-            <img src="./images/perxels.svg" alt="Perxels logo" />
-            <img src="./images/checked.svg" alt="checked logo" />
+            <img src={rectangle} alt="Top rectangle" />
+            <img src={perxels} alt="Perxels logo" />
+            <img src={checked} alt="checked logo" />
             <h1>Submission Successful</h1>
             <p>Your assessment has been successfully submitted. A mail will be sent to you on the next stage of the process. Do have a great day!</p>
             <button>Sign Out</button>

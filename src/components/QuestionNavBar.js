@@ -1,10 +1,10 @@
-
+import candidate from "../images/candidate.svg";
 
 
 const QuestionNavBar = () => {
     return (
         <div>
-            <img src="./images/candidate.svg" alt="Candidate"/>
+            <img src={candidate} alt="Candidate"/>
             <p></p>
             <p>Time Left</p>
             <p>00hr : 10m : 30s</p>
