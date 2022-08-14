@@ -4,7 +4,7 @@
 const QuestionNavBar = () => {
     return (
         <div>
-            <img alt=""/>
+            <img src="./images/candidate.svg" alt="Candidate image"/>
             <p></p>
             <p>Time Left</p>
             <p>00hr : 10m : 30s</p>
