@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Question from "./Question";
+
 
 function Instruction() {
   return (
@@ -11,7 +11,7 @@ function Instruction() {
             <li>Don't be afraid</li>
             <li>wagmi</li>
         </ul>
-        <Link to="Question"><button>Start Now</button></Link>
+        <Link to="/Question"><button>Start Now</button></Link>
     </div>  
   );
 }

@@ -17,11 +17,11 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
-        <Route path='Signin' element={<Signin />} />
-        <Route path='RetrievePassword' element={<RetrievePassword />} /> 
-        <Route path='Instruction' element={<Instruction />} />
-        <Route path='Question' element={<Question />} />
-        <Route path='SubmissionStatus' element={<SubmissionStatus />} />  
+        <Route path='/Signin' element={<Signin />} />
+        <Route path='/RetrievePassword' element={<RetrievePassword />} /> 
+        <Route path='/Instruction' element={<Instruction />} />
+        <Route path='/Question' element={<Question />} />
+        <Route path='/SubmissionStatus' element={<SubmissionStatus />} />  
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

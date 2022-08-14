@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Signin = () => {
@@ -11,8 +12,8 @@ const Signin = () => {
                 <input />
                 <input />
                 <input />
-                <button>Sign In</button>
-                <button>Forgot password</button>
+                <Link to="/Instruction"><button>Sign In</button></Link>
+                <Link to="/RetrievePassword"><button>Forgot password</button></Link>
             </form>
         </div>
     )
