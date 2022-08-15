@@ -3,7 +3,7 @@ import candidate from "../images/candidate.svg";
 
 const QuestionNavBar = () => {
     return (
-        <div>
+        <div className="max-w-screen-lg">
             <img src={candidate} alt="Candidate"/>
             <p></p>
             <p>Time Left</p>
