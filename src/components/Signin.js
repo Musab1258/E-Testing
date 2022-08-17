@@ -7,7 +7,7 @@ const Signin = () => {
         <div className="border-2 max-w-screen-xl min-h-screen shadow-2xl max-h-full flex">
             <img src={rectangle} alt="Top rectangle" className="h-80"/>
             <div className="border-2 w-full text-center flex flex-col justify-center items-center -ml-24" >
-                <img src={perxels} alt="Perxels logo" className="w-28 mb-5 border-2 -mt-20" />
+                <img src={perxels} alt="Perxels logo" className="w-28 mb-5 -mt-20" />
                 <h1 className="text-3xl mb-5 w-2/6">Sign in</h1>
                 <p className="text-2xl mb-4">Hey there! kindly enter your log in details to access the questions</p>
                 <form className="flex flex-col justify-center items-center">
