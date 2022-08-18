@@ -14,7 +14,7 @@ const Signin = () => {
                     <input placeholder="Enter your fullName" className="text-base border py-2 pl-4 pr-96 mb-2 text-left" />
                     <input placeholder="Enter your email" className="text-base border py-2 pl-4 pr-96 mb-2 text-left" />
                     <input placeholder="Enter your unique password" className="text-base border py-2 pl-4 pr-96 mb-3 text-left" />
-                    <Link to="/Instruction"><button className="text-base border py-2 px-64 mb-2">Sign In</button></Link>
+                    <Link to="/Instruction"><button className="text-base border mb-2" style={{padding: "0.5rem 17rem"}}>Sign In</button></Link>
                     <Link to="/RetrievePassword"><button>Forgot password</button></Link>
                 </form>
             </div>
