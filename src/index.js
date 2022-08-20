@@ -7,6 +7,7 @@ import Signin from "./components/Signin";
 import RetrievePassword from './components/RetrievePassword';
 import Instruction from './components/Instruction';
 import Question from './components/Question';
+import AnotherQuestion from './components/AnotherQuestion';
 import SubmissionStatus from './components/SubmissionStatus';
 
 import reportWebVitals from './reportWebVitals';
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Route path='/RetrievePassword' element={<RetrievePassword />} /> 
         <Route path='/Instruction' element={<Instruction />} />
         <Route path='/Question' element={<Question />} />
+        <Route path='/AnotherQuestion' element={<AnotherQuestion />} />
         <Route path='/SubmissionStatus' element={<SubmissionStatus />} />  
       </Routes>
     </BrowserRouter>
