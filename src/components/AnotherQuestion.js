@@ -23,7 +23,10 @@ function AnotherQuestion() {
                 <button onClick={() => setIsOpen(true)} className="text-xl border py-2 w-48 bg-blue ml-20 text-white">Submit</button>
             </div>
         </div>
-        <SubmissionModal handleClose={() => setIsOpen(false)} isOpen={isOpen}>HELLO</SubmissionModal>
+        {
+            isOpen && 
+            <SubmissionModal handleClose={() => setIsOpen(false)} isOpen={isOpen} />
+        }
     </div>  
   );
 }

@@ -1,5 +1,31 @@
 import { useEffect, useRef } from "react";
-import ReactPortal from "./portals/ReactPortal";
+import { Link } from "react-router-dom";
+
+const darkBG = {
+	width: '100vw',
+	height: '100vh',
+	zIndex: 0,
+	top: '50%',
+	left: '50%',
+	transform: 'translate(-50%, -50%)',
+	position: 'absolute',
+}
+  
+const centered = {
+	position: 'fixed',
+	top: '50%',
+	left: '50%',
+	transform: 'translate(-50%, -50%)',
+}
+  
+const modal = {
+	width: '800px',
+	height: '200px',
+	zIndex: '10',
+	borderRadius: '16px',
+	boxShadow: '0 5px 20px 0 rgba(0, 0, 0, 0.04)',
+}
+  
 
 function SubmissionModal({ children, isOpen, handleClose }) {
 	const nodeRef = useRef(null);
@@ -12,11 +38,23 @@ function SubmissionModal({ children, isOpen, handleClose }) {
 	}, [handleClose]);
 
 	return (
-		<ReactPortal wrapperId="react-portal-modal-container">
-			<div className="" ref={nodeRef}>
-				<div className="w-3/5 h-1/5 shadow-lg">{children}</div>
+		<div className="bg-black opacity-80" style={darkBG} ref={nodeRef}>
+			<div className="bg-white" style={centered}>
+				<div className="flex flex-col justify-center items-center text-center bg-white" style={modal}>
+					<p className="text-2xl mb-6">Are you sure you want to submit?</p>
+					<div className="flex justify-center items-center">
+						<Link to="/SubmissionStatus">
+						<button className="text-xl border py-2 w-28 bg-blue mr-16 text-white">
+							Yes
+						</button>
+						</Link>
+						<button onClick={handleClose} className="text-xl border py-2 w-28 bg-blue mr-16 text-white">
+							No
+						</button>
+					</div>
+				</div>
 			</div>
-		</ReactPortal>
+		</div>
 	);
 }
 export default SubmissionModal;
