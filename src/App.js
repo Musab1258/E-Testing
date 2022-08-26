@@ -13,6 +13,7 @@ function App() {
         <h1 className="text-3xl mb-4 w-2/6 text-blue">Welcome to Perxel's e-assesment platform</h1>
         <p className="text-lg text-center mb-4 w-2/5">We wish you a blissful experience and great luck in your assesment</p>
         <Link to="/Signin" className="text-xl border py-2 w-64 bg-blue text-white rounded-md"><button>Get Started</button></Link>
+        <p className="text-sm text-center">Designed by <a href="https://ng.linkedin.com/in/ibrahim-salami-515319168">Ibrahim Salami</a></p>
       </div>
     </div>
   );
