@@ -38,17 +38,17 @@ function SubmissionModal({ children, isOpen, handleClose }) {
 	}, [handleClose]);
 
 	return (
-		<div className="bg-black opacity-80" style={darkBG} ref={nodeRef}>
-			<div className="bg-white" style={centered}>
-				<div className="flex flex-col justify-center items-center text-center bg-white" style={modal}>
+		<div className="bg-black" style={darkBG} ref={nodeRef}>
+			<div style={centered}>
+				<div className="rounded-md flex flex-col justify-center items-center text-center bg-white" style={modal}>
 					<p className="text-2xl mb-6">Are you sure you want to submit?</p>
 					<div className="flex justify-center items-center">
 						<Link to="/SubmissionStatus">
-						<button className="text-xl border py-2 w-28 bg-blue mr-16 text-white">
+						<button className="text-xl border rounded-md py-2 w-28 bg-blue mr-16 text-white">
 							Yes
 						</button>
 						</Link>
-						<button onClick={handleClose} className="text-xl border py-2 w-28 bg-blue mr-16 text-white">
+						<button onClick={handleClose} className="text-xl border rounded-md py-2 w-28 bg-blue mr-16 text-white">
 							No
 						</button>
 					</div>

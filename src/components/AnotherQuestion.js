@@ -8,7 +8,7 @@ function AnotherQuestion() {
     const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-2 max-w-screen-xl min-h-screen shadow-2xl flex">
+    <div className="border-2 w-[80rem] min-h-screen shadow-2xl flex">
         <QuestionNavBar />
         <div className="min-h-screen w-full flex flex-col ml-12">
             <div className="border-2 flex flex-col text-left mt-16 mb-8 w-11/12 h-48 rounded-lg pt-8 pl-6">

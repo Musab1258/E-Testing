@@ -3,7 +3,7 @@ import QuestionNavBar from "./QuestionNavBar";
 
 function Question() {
   return (
-    <div className="border-2 max-w-screen-xl min-h-screen shadow-2xl flex">
+    <div className="border-2 w-[80rem] min-h-screen shadow-2xl flex">
         <QuestionNavBar />
         <div className="min-h-screen w-full flex flex-col ml-12">
             <div className="border-2 flex flex-col text-left mt-16 mb-8 w-11/12 h-48 rounded-lg pt-8 pl-6">
@@ -19,8 +19,8 @@ function Question() {
                 </ul>
             </div>
             <div className="flex justify-center items-center">
-                <button className="text-xl border py-2 w-48 bg-blue -ml-32 text-white">Previous</button>
-                <Link to="/AnotherQuestion"><button className="text-xl border py-2 w-48 bg-blue ml-20 text-white">Next</button></Link>
+                <button className="text-xl border py-2 w-48 bg-blue -ml-32 text-white rounded-md">Previous</button>
+                <Link to="/AnotherQuestion"><button className="text-xl border py-2 w-48 bg-blue ml-20 text-white rounded-md">Next</button></Link>
             </div>
         </div>
     </div>  

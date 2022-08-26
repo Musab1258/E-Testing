@@ -3,11 +3,11 @@ import candidate from "../images/candidate.svg";
 
 const QuestionNavBar = () => {
     return (
-        <div className="w-1/4 flex flex-col justify-center items-center bg-blue text-center">
+        <div className="w-1/3 flex flex-col justify-center items-center bg-blue text-center">
             <img src={candidate} alt="Candidate" className="w-20 mb-4"/>
             <p className="text-yellow text-base mb-16">Zainab Salman</p>
             <p className="text-base mb-1">Time Left</p>
-            <p className="bg-white py-3 px-6 mb-16">00hr : 10m : 30s</p>
+            <p className="bg-white py-3 w-64 mb-16 border border-yellow rounded-md">00hr : 10m : 30s</p>
             <div className="m-2">
                 <span className="bg-white px-2 m-2">1</span>
                 <span className="bg-white px-2 m-2">2</span>
