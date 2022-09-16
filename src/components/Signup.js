@@ -23,7 +23,7 @@ const Signup = () => {
     useEffect(() => {
         if (loading) return; 
         if (user) navigate("/Instruction");
-    }, [user, loading]);
+    }, [user, loading, navigate]);
 
     return (
         <div className="border-2 w-[80rem] min-h-screen shadow-2xl max-h-full flex">
