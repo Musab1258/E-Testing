@@ -2,20 +2,26 @@ import { Link, useNavigate } from "react-router-dom";
 import rectangle from "../images/Rectangle.svg";
 import perxels from "../images/perxels.svg";
 import { useEffect, useState } from "react";
-import { auth, logInWithEmailAndPassword } from "../firebase";
+import {
+    auth,
+    registerWithEmailAndPassword,
+  } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-const Signin = () => {
+const Signup = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [user, loading] = useAuthState(auth);
     const navigate = useNavigate();
 
+    const register = () => {
+        if(!name) alert("Please enter a name");
+        registerWithEmailAndPassword(name, email, password);
+    } 
+
     useEffect(() => {
-        if (loading) {
-           return; 
-        }
+        if (loading) return; 
         if (user) navigate("/Instruction");
     }, [user, loading]);
 
@@ -24,39 +30,41 @@ const Signin = () => {
             <img src={rectangle} alt="Top rectangle" className="h-80"/>
             <div className="border-2 w-full text-center flex flex-col justify-center items-center -ml-24" >
                 <img src={perxels} alt="Perxels logo" className="w-28 mb-5 -mt-20" />
-                <h1 className="text-3xl mb-5 w-2/6 text-blue">Sign in</h1>
+                <h1 className="text-3xl mb-5 w-2/6 text-blue">Sign up</h1>
                 <p className="text-2xl mb-10">Hey there! kindly enter your log in details to access the questions</p>
                 <form className="flex flex-col justify-center items-center">
-                    <input 
+                    <input
+                        type="text" 
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Enter your fullName" 
                         className="text-base border rounded-md py-3 pl-4 pr-96 mb-4 text-left" 
                     />
                     <input 
+                        type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter your email" 
                         className="text-base border py-3 rounded-md pl-4 pr-96 mb-4 text-left"     
                     />
                     <input
+                        type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)} 
                         placeholder="Enter your unique password" 
                         className="text-base border rounded-md py-3 pl-4 pr-96 mb-6 text-left" 
                     />
                     <button
-                        onClick={() => logInWithEmailAndPassword(email, password)} 
+                        onClick={register} 
                         className="text-base border mb-4 bg-blue text-white rounded-md w-[37.5rem] py-3"
                     >
-                        Sign In
+                        Sign Up
                     </button>
-                    <Link to="/RetrievePassword" className="underline text-blue"><button>Forgot password</button></Link>
-                    <p>Don't have an account? <Link to="/Signup" className="underline text-blue">Sign up</Link> now</p>
+                    <p>Already have an account? <Link to="/Signin" className="underline text-blue">Sign in</Link> now</p>
                 </form>
             </div>
         </div>
     )
 }
 
-export default Signin;
+export default Signup;

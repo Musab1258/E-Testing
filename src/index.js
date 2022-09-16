@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
+import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import RetrievePassword from './components/RetrievePassword';
 import Instruction from './components/Instruction';
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/Signin' element={<Signin />} />
+        <Route path='/Signup' element={<Signup />} />
         <Route path='/RetrievePassword' element={<RetrievePassword />} /> 
         <Route path='/Instruction' element={<Instruction />} />
         <Route path='/Question' element={<Question />} />
