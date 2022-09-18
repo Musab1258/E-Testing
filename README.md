@@ -32,6 +32,7 @@ Click the fork button on this repo to fork this repo.
 
 ### For users of the web app
 A new user will first sign up on the [web app](https://test-prep-app.netlify.app/), and then proceed to sign in. When a user is signed in the user can take the test and then submit when he or she is done.
+
 If a user forgets his or her password then the user can retrieve the password by clicking on the retrieve password button.
 
 ## Contributing
