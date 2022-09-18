@@ -26,20 +26,23 @@ const Signin = () => {
                 <img src={perxels} alt="Perxels logo" className="w-28 mb-5 -mt-20" />
                 <h1 className="text-3xl mb-5 w-2/6 text-blue">Sign in</h1>
                 <p className="text-2xl mb-10">Hey there! kindly enter your log in details to access the questions</p>
-                <form className="flex flex-col justify-center items-center">
+                <div className="flex flex-col justify-center items-center">
                     <input 
+                        type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Enter your fullName" 
                         className="text-base border rounded-md py-3 pl-4 pr-96 mb-4 text-left" 
                     />
                     <input 
+                        type="text"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter your email" 
                         className="text-base border py-3 rounded-md pl-4 pr-96 mb-4 text-left"     
                     />
                     <input
+                        type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)} 
                         placeholder="Enter your unique password" 
@@ -53,7 +56,7 @@ const Signin = () => {
                     </button>
                     <Link to="/RetrievePassword" className="underline text-blue"><button>Forgot password</button></Link>
                     <p>Don't have an account? <Link to="/Signup" className="underline text-blue">Sign up</Link> now</p>
-                </form>
+                </div>
             </div>
         </div>
     )
