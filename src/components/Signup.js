@@ -25,7 +25,10 @@ function Signup() {
   useEffect(() => {
     if (loading) return;
     if (user) navigate("/Instruction");
-  }, [user, loading]);
+    if (error) return;
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user, loading, error]);
 
   return (
     <div className="border-2 w-[80rem] min-h-screen shadow-2xl max-h-full flex">

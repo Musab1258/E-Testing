@@ -29,9 +29,12 @@ const SubmissionStatus = () => {
     useEffect(() => {
         if (loading) return;
         if (!user) return navigate("/");
-    
+        if (error) return;
+
         fetchUserName();
-      }, [user, loading]);
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [user, loading, error]);
 
     return (
         <div className="border-2 w-[80rem] min-h-screen shadow-2xl flex">

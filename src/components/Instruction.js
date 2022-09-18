@@ -8,7 +8,7 @@ import rectangle from "../images/Rectangle.svg";
 
 
 function Instruction() {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
 
@@ -30,6 +30,8 @@ function Instruction() {
     if (!user) return navigate("/");
 
     fetchUserName();
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, loading]);
 
   return (

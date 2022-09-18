@@ -13,7 +13,10 @@ const RetrievePassword = () => {
     useEffect(() => {
         if (loading) return;
         if (user) navigate("/Instruction");
-    }, [user, loading]);
+        if (error) return;
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [user, loading, error]);
 
 
     return (
@@ -24,10 +27,10 @@ const RetrievePassword = () => {
                 <h1 className="text-3xl mb-5 w-2/6 text-blue">Retrieve Password</h1>
                 <p className="text-2xl mb-4">Please enter your email address to get your password</p>
                 <div className="flex flex-col justify-center items-center">
-                    <input 
-                        value="email"
-                        onChange={(e) => setEmail(e.current.value)}
-                        type="text"
+                    <input
+                        type="text" 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter your email" 
                         className="text-base border py-2 pl-4 pr-96 mb-8 text-left rounded-md" 
                     />
