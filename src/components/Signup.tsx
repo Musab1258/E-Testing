@@ -8,12 +8,12 @@ import {
 import rectangle from "../images/Rectangle.svg";
 import perxels from "../images/perxels.svg";
 
-//import "./Register.css";
+
 
 function Signup() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [name, setName] = useState<string>("");
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
 
