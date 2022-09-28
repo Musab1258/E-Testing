@@ -1,11 +1,20 @@
-import { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import { Link } from "react-router-dom";
 import QuestionNavBar from "./QuestionNavBar";  
 import SubmissionModal from "./SubmissionModal";
+import ModalContent from "./ModalContent";
+
+const centered: CSSProperties = {
+	position: 'fixed',
+	top: '50%',
+	left: '50%',
+	transform: 'translate(-50%, -50%)',
+}
 
 
 function AnotherQuestion() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const handleClose = () => setIsOpen(false);
 
   return (
     <div className="border-2 w-[80rem] min-h-screen shadow-2xl flex">
@@ -23,9 +32,14 @@ function AnotherQuestion() {
                 <button onClick={() => setIsOpen(true)} className="text-xl border py-2 w-48 bg-blue ml-20 text-white">Submit</button>
             </div>
         </div>
-        {
+
+        { 
             isOpen && 
-            <SubmissionModal handleClose={() => setIsOpen(false)} isOpen={isOpen} />
+            <SubmissionModal handleClose={handleClose} isOpen={isOpen}>
+            <div style={centered}>
+                <ModalContent handleClose={handleClose} isOpen={isOpen} />
+			</div>
+            </SubmissionModal>
         }
     </div>  
   );

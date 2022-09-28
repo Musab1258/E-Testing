@@ -7,7 +7,7 @@ import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import RetrievePassword from './components/RetrievePassword';
 import Instruction from './components/Instruction';
-import Question from './components/Question';
+import Question from './components/Question.tsx';
 import AnotherQuestion from './components/AnotherQuestion';
 import SubmissionStatus from './components/SubmissionStatus';
 

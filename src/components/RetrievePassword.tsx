@@ -6,7 +6,7 @@ import { auth, sendPasswordReset } from "../firebase";
 import { useState, useEffect } from "react";
 
 const RetrievePassword = () => {
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState<string>("");
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate();
 

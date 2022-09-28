@@ -8,12 +8,11 @@ function createWrapperAndAppendToBody(wrapperId) {
   return wrapperElement;
 }
 
-
 function ReactPortal({ children, wrapperId = "react-portal-wrapper" }) {
-  const [wrapperElement, setWrapperElement] = useState(null);
+  const [wrapperElement, setWrapperElement] = useState<any>(null);
 
   useLayoutEffect(() => {
-    let element = document.getElementById(wrapperId);
+    let element: any = document.getElementById(wrapperId);
     let systemCreated = false;
     // if element is not found with wrapperId or wrapperId is not provided,
     // create and append to body

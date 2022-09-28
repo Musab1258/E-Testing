@@ -9,7 +9,7 @@ import rectangle from "../images/Rectangle.svg";
 
 function Instruction() {
   const [user, loading] = useAuthState(auth);
-  const [name, setName] = useState("");
+  const [name, setName] = useState<string>("");
   const navigate = useNavigate();
 
   const fetchUserName = async () => {
