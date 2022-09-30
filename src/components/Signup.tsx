@@ -42,7 +42,8 @@ function Signup() {
                 type="text" 
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your fullName" 
+                placeholder="Enter your fullName"
+                data-testid="text-input" 
                 className="text-base border rounded-md py-3 pl-4 pr-96 mb-4 text-left" 
             />
             <input 
@@ -60,7 +61,8 @@ function Signup() {
                 className="text-base border rounded-md py-3 pl-4 pr-96 mb-6 text-left" 
             />
             <button
-                onClick={register} 
+                onClick={register}
+                data-testid="signup-button" 
                 className="text-base border mb-4 bg-blue text-white rounded-md w-[37.5rem] py-3"
             >
                 Sign Up
