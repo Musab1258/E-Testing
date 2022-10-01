@@ -1,14 +1,14 @@
-//import { expect, test } from "@jest/globals";
+import { expect, test } from "@jest/globals";
 import {render, screen} from '@testing-library/react';
-import { StaticRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import App from "../App"
 
 test("displays the home page", async () => {
   render(
-    <StaticRouter>
+      <MemoryRouter initialEntries={["/"]}>
         <App />
-    </StaticRouter>
+      </MemoryRouter>
   );
 
-  expect(screen.getByRole("img")).toBeInTheDocument();
+  expect(screen.getByTestId("get-started-button")).toBeInTheDocument();
 });
