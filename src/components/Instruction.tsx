@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import { Link } from "react-router-dom";
@@ -12,6 +12,8 @@ function Instruction() {
   const [name, setName] = useState<string>("");
   const navigate = useNavigate();
 
+  const location = useLocation();
+  //const candidateName = {location.state.name}
   const fetchUserName = async () => {
     try {
       const q = query(collection(db, "users"), where("uid", "==", user?.uid));
@@ -38,7 +40,8 @@ function Instruction() {
     <div className="border-2 w-[80rem] min-h-screen shadow-2xl flex">
         <img src={rectangle} alt="Top rectangle" className="h-80" />
         <div className="border-2 w-full flex flex-col justify-center items-center text-center -ml-24" >
-        <div className="hidden"><p>Logged in as {name}</p></div>
+        <div className="hidden"><p>Signed up as {name}</p></div>
+        <div className="hidden"><p>Logged in as {location.state.name}</p></div>
           <h1 className="text-3xl mb-2 w-2/6 -mt-16 text-blue">Instructions</h1>
           <p className="text-2xl mb-4">Please read the following instructions carefully.</p>
           <ul className="" style={{marginLeft: "-62rem"}}>

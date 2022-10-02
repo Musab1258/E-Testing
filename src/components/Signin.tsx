@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import rectangle from "../images/Rectangle.svg";
 import perxels from "../images/perxels.svg";
@@ -11,15 +12,25 @@ const Signin = () => {
     const [password, setPassword] = useState<string>("");
     const [user, loading] = useAuthState(auth);
     const navigate = useNavigate();
+    const NameContext = React.createContext(name);
 
     useEffect(() => {
+        const currentName = name;
+        localStorage.setItem('storageKey', JSON.stringify(currentName))
+    })
+    useEffect(() => {
         if (loading) return; 
-        if (user) navigate("/Instruction");
+        if (user) navigate("/Instruction", {
+            state: {
+                name: name
+            }
+        });
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user, loading]);
 
     return (
+        <NameContext.Provider value={name}>
         <div className="border-2 w-[80rem] min-h-screen shadow-2xl max-h-full flex">
             <img src={rectangle} alt="Top rectangle" className="h-80"/>
             <div className="border-2 w-full text-center flex flex-col justify-center items-center -ml-24" >
@@ -59,6 +70,7 @@ const Signin = () => {
                 </div>
             </div>
         </div>
+        </NameContext.Provider>
     )
 }
 

@@ -1,11 +1,16 @@
+import React from "react";
+//import { useLocation } from "react-router-dom"
 import candidate from "../images/candidate.svg";
 
-
 const QuestionNavBar = () => {
+
+    const name: any = (localStorage.getItem('storageKey'))  
+    //const location = useLocation();
+    //const name = useContext(NameContext);
     return (
         <div className="w-1/3 flex flex-col justify-center items-center bg-blue text-center">
             <img src={candidate} alt="Candidate" className="w-20 mb-4"/>
-            <p className="text-yellow text-base mb-16">Zainab Salman</p>
+            <p className="text-yellow text-base mb-16">{name}</p>
             <p className="text-base mb-1">Time Left</p>
             <p className="bg-white py-3 w-64 mb-16 border border-yellow rounded-md">00hr : 10m : 30s</p>
             <div className="m-2">
