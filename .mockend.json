@@ -1,18 +1,21 @@
 {
+    "ModelName": {
+        "fieldName": {
+        "<type>": {} | [],
+        "hasMany": "Model",
+        "belongsTo": "Model"
+        }
+    },
     "Questions": {
         "Question1": {
             "Q1": "What is the first UX information you need to have before you start designing?",
-            "A": "option 1",
-            "B": "option 2",
-            "c": "option 3",
-            "D": "option 4"
+            "OptionA": "option 1",
+            "OptionB": "option 2",
+            "OptionC": "option 3",
+            "OptionD": "option 4"
         },
         "Question2": {
-            "Q2": "What is the first UX information you need to have before you start designing?",
-            "A": "option 1",
-            "B": "option 2",
-            "c": "option 3",
-            "D": "option 4"
+            "Q2": "What is frontend web development?"
         }
     }
 }

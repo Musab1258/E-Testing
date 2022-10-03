@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import QuestionNavBar from "./QuestionNavBar";  
 
 function Question() {
+
+    //const [error, setError] = useState(null);
+    //const [ isLoaded, setIsLoaded] = useState(false);
+    const [ questions, setQuestions] = useState({});
+    useEffect(() => {
+        fetch("")
+            .then(res => res.json())
+            .then(
+                (result) => setQuestions(result)
+                    //setIsLoaded: true,
+            )
+    })
   return (
     <div className="border-2 w-[80rem] min-h-screen shadow-2xl flex">
         <QuestionNavBar />
